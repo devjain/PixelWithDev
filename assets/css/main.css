@@ -1,6 +1,6 @@
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Questrial",  sans-serif;
+  --default-font: 'Inter',sans-serif;
+  --heading-font: 'Poppins',sans-serif;
   --nav-font: "Noto Sans",  sans-serif;
 }
 
@@ -130,12 +130,26 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 20px 0;
-  transition: all 0.5s;
-  z-index: 997;
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 0px 0;
+    transition: all 0.5s;
+    z-index: 997;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    max-width: 1170px;
+    background: transparent;
 }
+
+.banner-image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
 
 .header .header-container {
   background: var(--surface-color);
@@ -688,9 +702,14 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 80px 0;
-  position: relative;
-  overflow: hidden;
+    padding: 80px 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    transform: translateY(-50%);
 }
 
 .hero .content h2 {
@@ -903,7 +922,7 @@ section,
 }
 
 .about .personal-info {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   padding: 2rem;
   background-color: var(--surface-color);
   border-radius: 1rem;
@@ -1990,3 +2009,4 @@ section,
   color: #e87532;
   text-decoration: underline;
 }
+
